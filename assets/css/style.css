@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+ 
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+  font-size: 25px;
+}
+
+button {
+    font-size: 30px;
+    width: 50%;
+}
