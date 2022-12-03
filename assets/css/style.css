@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
- 
 }
 
 ul {
@@ -16,6 +15,7 @@ ul {
 }
 
 button {
-    font-size: 30px;
-    width: 50%;
+  font-size: 30px;
+  width: 50%;
 }
+
