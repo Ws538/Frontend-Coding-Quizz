@@ -3,13 +3,12 @@
 var startButton = document.querySelector(".startButton");
 var timerEl = document.querySelector(".timerCount");
 var generateQuestion = document.querySelector(".generateQuestion");
-var generateChoices = document.querySelectorAll("#choices");
 var choicesEl = document.querySelector("#choices");
 var questionIndex = 0;
-var startEl = document.querySelector("#start")
-var quizzEl = document.querySelector("#quizz")
-var endEl = document.querySelector("#end")
-
+var startEl = document.querySelector("#start");
+var quizzEl = document.querySelector("#quizz");
+var endEl = document.querySelector("#end");
+var submitEl = document.querySelector("#submit");
 
 var isWin = false;
 var timer;
@@ -58,8 +57,8 @@ var questions = [
 
 function startQuizz() {
   isWin = false;
-  startEl.classList.add("hide")
-  quizzEl.classList.remove("hide")
+  startEl.classList.add("hide");
+  quizzEl.classList.remove("hide");
   timerCount = 100;
   startTimer();
   renderQuestions();
@@ -95,14 +94,14 @@ function renderQuestions() {
     buttonEl.addEventListener("click", checkAnswer);
   }
 }
-function checkAnswer(e) {
-  var userChoice = e.target.innerText;
+function checkAnswer(event) {
+  var userChoice = event.target.textContent;
   if (userChoice === questions[questionIndex].answer) {
     alert("correct");
   } else {
     alert("wrong");
     // , when answered incorrectly, time is subtracted 10sec
-    timerCount -= 10
+    timerCount -= 10;
   }
   questionIndex = questionIndex + 1;
   if (questions.length > questionIndex) {
@@ -113,16 +112,42 @@ function checkAnswer(e) {
   }
 }
 
-
 //when game is over, save initials and score, score = time left
 function winGame() {
-    var scoreEl = document.getElementById("score")
-    scoreEl.textContent = timerCount
-    quizzEl.classList.add("hide")
-    endEl.classList.remove("hide")
-    timerEl.classList.add("hide")
+  var scoreEl = document.getElementById("score");
+  scoreEl.textContent = timerCount;
+  quizzEl.classList.add("hide");
+  endEl.classList.remove("hide");
+  timerEl.classList.add("hide");
 }
 
-//event listener to button
 
 startButton.addEventListener("click", startQuizz);
+// create form
+
+//submit button and highscore link both go to same
+function openPage() {
+  window.open("./assets/html 2/index2.html");
+}
+
+submitEl.addEventListener("click", function () {
+  var initalsInput = document.querySelector("#initials");
+
+  var user = {
+    initals: initalsInput.value,
+    score: timerCount,
+  };
+
+  localStorage.setItem("user", JSON.stringify(user));
+
+  
+});
+
+//display local storage JSOn
+
+
+
+
+
+
+
