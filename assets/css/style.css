@@ -16,6 +16,13 @@ ul {
 
 button {
   font-size: 30px;
-  width: 50%;
+  
 }
 
+li {
+  list-style-type: none;
+}
+
+.hide {
+  display: none;
+}
