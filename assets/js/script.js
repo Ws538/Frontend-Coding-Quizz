@@ -150,7 +150,6 @@ function renderMessage() {
   } else {
     return;
   }
-  renderLists();
 }
 
 submitEl.addEventListener("click", function (event) {
@@ -162,19 +161,6 @@ submitEl.addEventListener("click", function (event) {
   saveLastScore();
   renderMessage();
 });
-
-function renderLists() {
-  listEl.innerHTML = "";
-
-  var p = document.createElement("p");
-  p.setAttribute("data-index, i");
-
-  var button = document.createElement("button");
-  button.textContent = "remove";
-
-  p.appendChild(button);
-  todoList.appendChild(p);
-}
 
 //highscore button,
 highscoreEl.addEventListener("click", function (event) {
