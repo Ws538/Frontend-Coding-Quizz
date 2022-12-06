@@ -1,11 +1,22 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;  ;
+}
+
+body {
+  background-color: white;
 }
 
 ul {
   display: flex;
   justify-content: space-between;
   font-size: 30px;
+}
+
+.btn {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .container {
@@ -16,7 +27,10 @@ ul {
 
 button {
   font-size: 30px;
-
+  min-width: 300px;
+  background-color: rgb(123, 58, 219);
+  color: white;
+  margin-bottom: 8px;
 }
 
 li {
@@ -25,4 +39,14 @@ li {
 
 .hide {
   display: none;
+}
+
+#questions {
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(27, 83, 203);
+  cursor: pointer;
+  
 }

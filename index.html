@@ -12,53 +12,54 @@
   <body>
     <header>
       <ul>
-        <li><a href="./assets/html 2/index2.html">Highscores</a></li>
+        <li><button id="highScores">Highscores</button></li>
         <li>Timer :<a class="timerCount"> 100</a></li>
       </ul>
     </header>
 
     <section id="start">
       <div class="container">
-        <h2 class="generateQuestion" >
+        <h2 class="generateQuestion">
           Coding Quizz Challenge, This quizz will be multiple choice only, press
           'Start' to begin
         </h2>
 
-          <div>
-            <button class="startButton">Start</button>
-          </div>
-          
-        
+        <div>
+          <button class="startButton">Start</button>
+        </div>
       </div>
     </section>
 
     <section id="quizz" class="hide">
-      <h2 id="questions"> </h2>
+      <h2 id="questions"></h2>
       <div id="choices">
-        <ul>
-          <li class="btn"><button id="button1"></button></li>
-          <li class="btn"><button id="button2"></button></li>
-          <li class="btn"><button id="button3"></button></li>
-          <li class="btn"><button id="button4"></button></li>
+        <ul class="btn">
+          <li ><button id="button1"></button></li>
+          <li ><button id="button2"></button></li>
+          <li ><button id="button3"></button></li>
+          <li ><button id="button4"></button></li>
         </ul>
       </div>
     </section>
 
-
-    <Section id="end" class="hide">
+    <section id="end" class="hide">
       <form>
         <div>
           <h1>All done!</h1>
         </div>
-        <p id="score"></p> 
-        <input type="text" id="initials"> <button id="submit" onclick="openPage()"> submit</button>
-     </form>
+        <p id="score"></p>
+        <input type="text" id="initials" /> <button id="submit">submit</button>
+      </form>
+    </section>
 
+    <section id="scoreCount" class="hide">
+      <h2>score count</h2>
 
-
-
-
-    </Section>
+      <p id="list">
+        <li id="savedInitials"></li>
+        <li id="savedScores"></li>
+      </p>
+    </section>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
