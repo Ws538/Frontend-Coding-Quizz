@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;  ;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 body {
@@ -49,4 +50,44 @@ button:hover {
   background-color: rgb(27, 83, 203);
   cursor: pointer;
   
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#initials {
+  padding: 8px;
+}
+
+#score  {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+::placeholder {
+  color: rgb(123, 58, 219);
+}
+
+h1 {
+  font-size: 35px;
+}
+
+#savedScores {
+  font-size: 30px;
+}
+
+#savedInitials {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+
+}
+
+#initials {
+  margin-bottom: 10px;
 }
