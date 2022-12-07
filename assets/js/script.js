@@ -52,7 +52,7 @@ var questions = [
 
   {
     title:
-      "A very useful tool used during development and debugging for priinting content to the defugger is:",
+      "A very useful tool used during development and debugging for printing content to the defugger is:",
     choices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
     answer: "console.log",
   },
@@ -97,18 +97,43 @@ function renderQuestions() {
     var buttonEl = document.getElementById("button" + (i + 1));
     buttonEl.textContent = questions[questionIndex].choices[i];
     // if clicked , next question text plus choices appears
-    buttonEl.addEventListener("click", checkAnswer);
+    buttonEl.addEventListener("click", checkAnswer);   
+    
   }
 }
+
 function checkAnswer(event) {
   var userChoice = event.target.textContent;
   if (userChoice === questions[questionIndex].answer) {
-    alert("correct");
+    createDissapearingText();
   } else {
-    alert("wrong");
+    createDissapearingTextTwo();
     // , when answered incorrectly, time is subtracted 10sec
     timerCount -= 10;
   }
+
+  function createDissapearingText() {
+    var textElement = document.createElement("p");
+    textElement.innerHTML = "Correct Answer!";
+    document.body.appendChild(textElement);
+    setTimeout(() => {
+      document.body.removeChild(textElement);
+    }, 500);
+    textElement.style.textAlign = 'center'
+  }
+
+  function createDissapearingTextTwo() {
+    var textElement = document.createElement("p");
+    textElement.innerHTML = "Wrong Answer!";
+    document.body.appendChild(textElement);
+    setTimeout(() => {
+      document.body.removeChild(textElement);
+    }, 500);
+    textElement.style.textAlign = 'center'
+  }
+
+
+
   questionIndex = questionIndex + 1;
   if (questions.length > questionIndex) {
     renderQuestions();
@@ -127,6 +152,7 @@ function winGame() {
   timerEl.classList.add("hide");
   scoreCountEl.classList.add("hide");
 }
+
 
 startButton.addEventListener("click", startQuizz);
 // // create form
