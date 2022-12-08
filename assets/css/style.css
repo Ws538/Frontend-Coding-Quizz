@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -14,10 +15,9 @@ ul {
 }
 
 .btn {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .container {
@@ -49,7 +49,6 @@ li {
 button:hover {
   background-color: rgb(27, 83, 203);
   cursor: pointer;
-  
 }
 
 form {
@@ -63,7 +62,7 @@ form {
   padding: 8px;
 }
 
-#score  {
+#score {
   font-size: 30px;
   margin-top: 0;
 }
@@ -85,7 +84,6 @@ h1 {
 }
 h2 {
   font-size: 30px;
-
 }
 
 #initials {

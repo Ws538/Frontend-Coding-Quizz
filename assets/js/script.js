@@ -97,8 +97,7 @@ function renderQuestions() {
     var buttonEl = document.getElementById("button" + (i + 1));
     buttonEl.textContent = questions[questionIndex].choices[i];
     // if clicked , next question text plus choices appears
-    buttonEl.addEventListener("click", checkAnswer);   
-    
+    buttonEl.addEventListener("click", checkAnswer);
   }
 }
 
@@ -119,7 +118,7 @@ function checkAnswer(event) {
     setTimeout(() => {
       document.body.removeChild(textElement);
     }, 500);
-    textElement.style.textAlign = 'center'
+    textElement.style.textAlign = "center";
   }
 
   function createDissapearingTextTwo() {
@@ -129,10 +128,8 @@ function checkAnswer(event) {
     setTimeout(() => {
       document.body.removeChild(textElement);
     }, 500);
-    textElement.style.textAlign = 'center'
+    textElement.style.textAlign = "center";
   }
-
-
 
   questionIndex = questionIndex + 1;
   if (questions.length > questionIndex) {
@@ -152,7 +149,6 @@ function winGame() {
   timerEl.classList.add("hide");
   scoreCountEl.classList.add("hide");
 }
-
 
 startButton.addEventListener("click", startQuizz);
 // // create form
